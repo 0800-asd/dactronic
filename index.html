@@ -1,231 +1,327 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Datronix Sistemas Electronicos</title>
-<link rel="shortcut icon" href="https://datronix.com.ar/images/datrofavicon.ico"type="image/x-icon">
-<link rel="stylesheet" type="text/css" href="https://dactronic.vercel.app/style.css"/>
-<script type="text/javascript" src="https://datronix.com.ar/js/jquery.js"></script>
-<script type="text/javascript" src="https://datronix.com.ar/js/cufon-yui.js"></script>
-<script type="text/javascript" src="https://datronix.com.ar/js/Myriad_Pro_400-Myriad_Pro_700-Myriad_Pro_italic_400-Myriad_Pro_italic_700.font.js"></script>
-<script type="text/javascript" src="https://datronix.com.ar/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="https://datronix.com.ar/js/jquery.easing.compatibility.js"></script>
-<script type="text/javascript" src="https://datronix.com.ar/js/jcarousellite.js"></script>
-<script type="text/javascript" src="https://datronix.com.ar/js/slider.js"></script>
-<script type="text/javascript" src="https://datronix.com.ar/js/general.js"></script>
-<script type="text/javascript" src="https://datronix.com.ar/js/jquery.form.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datronix - Venta de Dispositivos</title>
+  <style>
+
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #DCF2F1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    
+    p {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 20px;
+          }
+
+    #container {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    header {
+      background-color: #365486;
+      color: #DCF2F1;
+      text-align: center;
+      padding: 20px;
+    }
+
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .product {
+      border: 2px solid #7FC7D9;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px;
+      background-color: #7FC7D9;
+      transition: transform 0.3s, border-radius 0.3s;
+    }
+
+    .product img {
+  width: 100%; /* Hace que la imagen ocupe el 100% del ancho del contenedor */
+  height: auto; /* Mantiene la proporción original de la imagen */
+  display: block; /* Elimina el espacio adicional debajo de la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  max-width: 200px; /* Puedes ajustar el tamaño máximo según tus necesidades */
+}
+
+    .product:hover {
+      transform: scale(1.1);
+      border-radius: 20px;
+    }
+
+    .payment-methods {
+      display: flex;
+      justify-content: space-around;
+      transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+      margin-top: 20px;
+      border-radius: 22px;
+    }
+
+    .payment-methods img {
+  width: 100%; /* Hace que la imagen ocupe el 100% del ancho del contenedor */
+  height: auto; /* Mantiene la proporción original de la imagen */
+  display: block; /* Elimina el espacio adicional debajo de la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  max-width: 200px; /* Puedes ajustar el tamaño máximo según tus necesidades */
+    }
+
+    .payment-methods:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  border-radius: 22px;
+
+}
+
+    .footer-wrapper {
+      background-color: #365486;
+      color: #DCF2F1;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .logos-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin-top: 30px;
+    }
+
+    .logo-carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .logo {
+      width: 250px;
+      height: auto;
+      margin: 0 10px;
+      transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+      border-radius: 20px;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    }
+
+    h2 {
+    display: block;
+    font-size: 2.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    }
+
+    h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    pp {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    color: white;
+    }
+
+    /* Estilos para el botón "Ver más productos" */
+    .more-products-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      margin-top: 0.35%;
+      text-decoration: none;
+      background-color: #365486;
+      color: #DCF2F1;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .more-products-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    #aviso-derechos {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1c1c1c; /* Cambia el color de fondo según tus preferencias */
+    text-align: center;
+    padding: 10px;
+    color: #fff; /* Cambia el color del texto según tus preferencias */
+    display: none; /* Inicialmente oculto */
+}
+  </style>
 </head>
 <body>
-	<div id="wrapper">
-    	<div id="header"><a href="https://datronix.com.ar/index_1.html"></a></div>
-	        <div id="nav"><div class="inner">	
-	        	<ul>
-	            	<li><a href="https://datronix.com.ar/index_1.html" class="current"><span class="link">nosotros</span></a></li>
-	                
-	                <li><a href="https://datronix.com.ar/servicios.html"><span class="link">servicios</span></a></li>
-	                
-	                <li><a href="https://datronix.com.ar/productos.html"><span class="link">productos</span></a>
-	                	<ul>
-	                    	<li><a href="https://datronix.com.ar/productos.html">catalogo</a></li>
-	                    	<li><a href="https://datronix.com.ar/audioysonido.html">audio y video</a></li>
-	                        <li><a href="https://datronix.com.ar/reconectores.html">protección eléctrica</a></li>
-	                        <li><a href="https://datronix.com.ar/lineaozonos.html">equipos de ozono</a></li>
-	                        <li><a href="https://datronix.com.ar/purificadores.html">purificadores de agua</a></li>
-	                        <li><a href="https://datronix.com.ar/saunas.html">generadores de vapor</a></li>
-	                        <li><a href="https://datronix.com.ar/saunas.html">saunas</a></li>
-	                        <li><a href="https://datronix.com.ar/hidromasaje.html">accesorios de hidromasajes</a></li>
-	                        <li><a href="https://datronix.com.ar/plaquetas.html">plaquetas electrónicas</a></li>
-	                        <li><a href="https://datronix.com.ar/seguridadycontrol.html">seguridad y control</a></li>
-                            <li><a href="https://datronix.com.ar/varios.html">varios</a></li>
-	                        <li><a href="http://www.datronixdesign.com.ar/" target="_blank">estética y spa</a></li>
-	                    </ul>
-	                </li>    
-	                <li><a href="https://datronix.com.ar/novedades.html"><span class="link">novedades</span></a></li>
-	                
-	                <li><a href="https://datronix.com.ar/contacto.html"><span class="link">contacto</span></a></li>
-	            </ul>
-	        </div>
-	    </div>
-        <div id="hold">
-	        <div id="featurednos">
-	        	<div class="sliderImages">
-	                <ul class="slider-img-list">
-	                    <li><a href="index.html" class="package1"><span>basic package</span></a></li>
-	                    <li><a href="index.html" class="package2"><span>premium</span></a></li>
-	                    <li><a href="index.html" class="package3"><span>seo</span></a></li>
-	                    <li><a href="index.html" class="package4"><span>wordpress</span></a></li>
-	                    <li><a href="index.html" class="package5"><span>global</span></a></li>
-	                </ul>
-	            </div>
-	            <div class="arrows">
-	            	<a href="index.html#" class="next"><span>next</span></a>
-	                <a href="index.html#" class="prev"><span>previous</span></a>
-	            </div>
-	            <div class="texthold"><div class="sliderText">
-	            	<ul class="slider-text-list">
-	                	<li>
-	                        <h2>brindamos soluciones <strong>inteligentes</strong></h2>
-	                        <p><font color="#FFFFFF">Ofrecemos soluciones integrales para cada necesidad.</font></p>
-	                        <a href="index.html" class="more">leer mas</a>
-	                    </li>
-	                    <li>
-	                        <h2>productos <strong>de calidad garantizada</strong></h2>
-	                        <p><font color="#FFFFFF">Ofrecemos alta calidad de productos y servicios,con la mejor tecnologia y garantia del mercado.</font></p>
-	                        <a href="index.html" class="more">leer mas</a>         
-	                    </li>
-	                    <li>
-	                        <h2>innovacion <strong>y calidad</strong></h2>
-	                        <p><font color="#FFFFFF">Trabajamos para crear productos innovadores.</font></p>
-	                        <a href="index.html" class="more">leer mas</a> 
-	                    </li>
-	                    <li>
-	                        <h2>amplia gama <strong>de ozonizadores</strong></h2>
-	                        <p><font color="#FFFFFF">Contamos con la mas completa linea de Ozonizadores, domesticos e industriales.</font></p>
-	                        <a href="index.html" class="more">leer mas</a>
-	                    </li>
-	                </ul>
-	            </div>
-        	</div>      
-        </div> 
-        
-        <div id="content">
-        	<div id="leftcolumn" style="width: 569px";>
-   		 		<h2>Bienvenido a Datronix</h2>
-         		<p> Bienvenido a la página web de Datronix, compañía 
-				especializada en<br>
-				sistemas electrónicos, fabricación y&nbsp; comercialización de 
-				una amplia gama de productos.<br>
-				Aquí encontrara información acerca 
-				de nuestros servicios y desarrollos. </p>
-				<p> Somos una empresa en continua renovación tecnológica, lo que 
-				nos permite permanecer a la vanguardia del sector y ofrecerle un 
-				servicio de primer orden.<br>
-				Trabajamos con las marcas comerciales más prestigiosas del 
-				mercado, lo que, unido a<br>
-				la profesionalidad de nuestro personal nos ayuda a conseguir un 
-				alto nivel de<br>
-				satisfacción para nuestros clientes.</p>
-         		<h3>nuestra mision</h3>
-            	<p>Desde Datronix trabajamos para<span style="letter-spacing: normal; background-color: #FFFFFF"><font color="#66696C"> 
-				p</font></span><font style="font-size: 9pt"><span style="color: rgb(102, 105, 108); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255)">roveer</span></font><span style="color: rgb(102, 105, 108); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255)"><font style="font-size: 9pt"> 
-				un servicio de excelencia que supere las expectativas de 
-				nuestros clientes, con honestidad, rapidez, calidad y 
-				tecnología; y así&nbsp; lograr </font></span>
-				ser la marca referente en el mercado por su calidad y diseño, 
-				ser líderes en la innovación de productos y servicios, adaptables 
-				a los cambios del mismo, y potenciar permanentemente con 
-				nuestros clientes relaciones de negocios de mutuo beneficio. Con 
-				ética y compromiso en la gestión, dando privilegio a la relación 
-				comercial y humana con nuestros clientes y proveedores, teniendo 
-				como filosofía la busqueda de la mejora continua.&nbsp; </p>
-				<p>&nbsp;</p>
-				<div class="col1">
-						<h3>desarrollos</h3>
-						<img src="https://datronix.com.ar/images/businesscards.jpg" width="240" height="118" alt="cards" class="border"/>
-						Realizamos desarrollos para terceros, Instalación y 
-						Mantenimiento de equipos propios y de terceros.</div>
-					<div class="col2" style="width: 250px; height: 217px">
-						<h3>calidad</h3>
-						<img src="https://datronix.com.ar/images/caldera.jpg" width="240" height="118" alt="cards" class="border"/>
-						<p>En cada detalle de nuestros productos encontrara 
-						calidad, diseño y tecnología.</p>
-					</div>
-					<p>
-					<a href="http://www.datronixdesign.com.ar/"target="_blank">
-					<object classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" id="obj1" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" border="0" width="520" height="100">
-						<param name="movie" value="datronix.swf">
-						<param name="quality" value="High">
-						<embed src="https://datronix.com.ar/datronix.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="obj1" width="520" height="100" quality="High"></object>
-			</div>
-      		<div id="rightcolumn">
-      			<div class="outerhol">
-					<div class="search">
-    					<form action="index.html" method="get">
-        					<input name="search" type="text" class="textfield">
-            				<input name="search" type="button" value="Buscar" class="button">
-        				</form>
-   			 		</div>
-				</div>
-      		
-      			<h3>Valide su Garantia</h3>
-        		<ul class="blog-entries">
-        			<li class="bd">
-						<ul>
-							<li class="image">
-								<a href="https://datronix.com.ar/formulario.html">
-								<img src="https://datronix.com.ar/images/gtia.jpg" alt="alternative text for image" title="complete el formulario" >
-								</a>
-							</li>
-							<li class="title"><span><a href="https://datronix.com.ar/formulario.html" title="registre su producto">Valide su garantía</a></span></li>
-							<li class="author">Complete el Formulario</li>
-							<li class="date">Registre su Producto</li>
-						</ul>
-		  			</li>                        
-                    <li class="bd">
-						<ul>
-							<li class="image">
-								<a href="index.html#">
-								<img src="https://datronix.com.ar/images/faq.jpg" alt="alternative text for image" title="image title here" >
-								</a>
-							</li>
-							<li class="title"><a href="index.html#">Preguntas Frecuentes</a></li>
-							<li class="author">Guia de Ayuda</li>
-							<li class="author">rapida</li>
-							<li class="date"></li>
-						</ul>
-					</li>                
-                    <li class="bd">
-						<ul>
-							<li class="image">
-								<a href="https://datronix.com.ar/formulario.html">
-								<img src="https://datronix.com.ar/images/cert.jpg" alt="alternative text for image" title="complete el formulario" >
-								</a>
-							</li>
-							<li class="title"><a href="https://datronix.com.ar/formulario.html">Obtenga su Certificado de Garantia</a></li>
-							<li class="author">lea atentamente</li>
-							<li class="date"></li>
-							
-						</ul>
-						
-							</li>
-							
-				</ul>
-				<h3>Suscribase al Newslatter</h3>
-				
-				<img src="https://datronix.com.ar/images/newsletter1.jpg" width="246" height="118" alt="cards" class="border"/>
-      		</div>
-      		<div class="clear"></div>
-      	</div>
-        <div id="footer">
-        	<div class="box">
-            	<h3>productos destacados</h3>
-	                <ul>
-						<li><a href="https://datronix.com.ar/lineaozonos.html">ozonizadores</a></li>
-                    	<li><a href="https://datronix.com.ar/lineaozonos.html">ozono en tanque</a></li>
-                    	<li><a href="https://datronix.com.ar/purificadores.html">purificadores de agua</a></li>
-                    	<li><a href="https://datronix.com.ar/audioysonido.html">microfonos hq</a></li>
-                    	<li><a href="https://datronix.com.ar/hidromasaje.html">accesorios hidromasajes</a></li>
-	                </ul>
-            </div>
-	        <div class="box">
-	            <h3>paginas de interes</h3>
-	            	<ul>
-	                	<li><a href="http://www.datronixdesign.com.ar/"target="_blank"title=>Datronix Design</a></li>
-	                    <li><a href="http://www.ioa-pag.org/"target="_blank" title=>Asociacion Internacional de Ozono</a></li>
-	                    <li><a href="index.html">Plan de Ahorro Datronix</a></li>
-	                    <li><a href="http://www.infiniawebs.com.ar/"target="_blank"title="Descubri Infin!a">Infinia Webs</a></li>
-	                    <li><a href="https://datronix.com.ar/Plantilla&#32;ML&#32;Datronix/O3&#32;Ambiente/index.html"target="_blank"title="Descubri Infin!a">ML</a></li>
-	                    <li><a href="https://datronix.com.ar/Plantilla&#32;ML&#32;Datronix/O3&#32;Tanque/index.html"target="_blank"title="Descubri Infin!a"></a></li>
 
-	                </ul>
-	        </div>
-        	<div class="box2">
-        		<h3>Datronix Design</h3>
-        		<li><a href="http://www.datronixdesign.com.ar/"target="_blank"title=><img src="https://datronix.com.ar/images/design.jpg" width="246" height="118" alt="cards" class="border"/>
-        	</div>
-        	<div class="clear"></div>
-		</div>
-    	<div id="copyright"><a href="http://www.infiniawebs.com.ar">By Infin!a Webs</a></div>
-	</div>
-	</div>
+  <div id="container">
+
+    <header>
+        <h1>Datronix</h1>
+        <pp style="font-size: 20px;">Mercado Lider y Top 1 de Ozonizadores y Blowers</pp>
+      </header>
+
+    <section>
+      <h2>Nuestros Productos</h2>
+      <div class="product-container">
+        <div class="product">
+          <img src="Bomba centrífuga.png" alt="Ozonizador">
+          <p>Ozonizadores</p>
+        </div>
+        <div class="product">
+            <img src="blower.png" alt="Soplador">
+            <p>Sopladores</p>
+          </div>
+        <div class="product">
+          <img src="Ozonizador.png" alt="Microcontrolador">
+          <p>Microcontroladores</p>
+        </div>
+      </div>
+      <a href="https://listado.mercadolibre.com.ar/_CustId_90229765?item_id=MLA853480833&category_id=MLA434726&seller_id=90229765&client=recoview-selleritems&recos_listing=true" class="more-products-btn">Ver todos productos</a>
+    </section>
+
+
+
+    <section>
+      <h2>Sobre Nosotros</h2>
+      <p style="font-size: 25px;">
+        Datronix es una empresa con más de 15 años de experiencia en el mercado argentino.
+        Somos líderes en ventas de ozonizadores y sopladores, con más de (ventas) ventas realizadas.
+        Trabajamos en Mercado Libre y aceptamos pagos mediante Mercado Pago, transferencia bancaria y tarjeta de crédito.
+      </p>
+    </section>
+
+    <section class="supporters">
+      <h2>Socios</h2>
+      <div class="logos-container">
+        <div class="logo-carousel" id="logo-carousel">
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <section>
+    <h2>Formas de Pago</h2>
+    <div class="payment-methods">
+      <img src="mp.svg" alt="Mercado Pago">
+      <img src="trans.png" alt="Transferencia Bancaria">
+      <img src="card.png" alt="Tarjeta de Crédito">
+      <img src="efectivo.png" alt="Efectivo">
+    </div>
+  </section>
+
+  <section>
+    <pp>ㅤ</pp>
+    <div class="ㅤ">
+    </div>
+  </section>
+
+  <script>
+    //  const logos = ['socio1.png', 'socio2.png', 'socio3.png', 'socio4.png', 'socio5.png'];
+    const logos = ['Lacus.png', 'Elektrim.png', 'vulcano.jpg'];
+
+      const logoContainer = document.getElementById('logo-carousel');
+
+      logos.forEach((logoSrc) => {
+          const logo = document.createElement('img');
+          logo.classList.add('logo');
+          logo.src = logoSrc;
+          logoContainer.appendChild(logo.cloneNode(true));
+      });
+
+      for (let i = 0; i < 10; i++) {
+          logos.forEach((logoSrc) => {
+              const logo = document.createElement('img');
+              logo.classList.add('logo');
+              logo.src = logoSrc;
+              logoContainer.appendChild(logo.cloneNode(true));
+          });
+      }
+
+      const carousel = document.querySelector('.logo-carousel');
+
+      let currentIndex = 0;
+
+      function updateCarousel() {
+          const translateValue = -currentIndex * 350 + 'px';
+          carousel.style.transform = 'translateX(' + translateValue + ')';
+      }
+
+      setInterval(() => {
+          currentIndex = (currentIndex + 1) % (logos.length);
+          updateCarousel();
+      }, 3000);
+  </script>
+      <div id="aviso-derechos">
+        &copy; 2024 Datronix. Todos los derechos reservados.
+    </div>
+    <script>
+        // Agrega eventos de clic a las imágenes de productos
+        document.querySelector('.product img[src="blower.png"]').addEventListener('click', function() {
+          // Abre una nueva ventana con la URL de los sopladores
+          window.open('https://listado.mercadolibre.com.ar/bomba_CustId_90229765_NoIndex_True#D[A:Bomba,on]', '_blank');
+        });
+    
+        document.querySelector('.product img[src="Bomba centrífuga.png"]').addEventListener('click', function() {
+          // Abre una nueva ventana con la URL de los ozonizadores
+          window.open('https://listado.mercadolibre.com.ar/ozonizador_CustId_90229765_NoIndex_True#D[A:ozonizador,on]', '_blank');
+        });
+    
+        document.querySelector('.product img[src="Ozonizador.png"]').addEventListener('click', function() {
+          // Abre una nueva ventana con la URL de los microcontroladores
+          window.open('https://listado.mercadolibre.com.ar/plaqueta_CustId_90229765_NoIndex_True#D[A:Plaqueta,on]', '_blank');
+        });
+      </script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+            var scrollPosition = window.innerHeight + window.scrollY;
+
+            if (scrollPosition >= scrollHeight) {
+                document.getElementById('aviso-derechos').style.display = 'block';
+            } else {
+                document.getElementById('aviso-derechos').style.display = 'none';
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
